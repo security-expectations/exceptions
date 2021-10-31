@@ -7,14 +7,17 @@ const { AssertionError } = require('assert')
  * @extends {AssertionError}
  */
 class SecurityAssertionError extends AssertionError {
-  constructor(options) {
+  constructor(options = {}) {
     super(options)
     this.vulnerabilityTitle = options?.vulnerabilityTitle || ''
     this.vulnerabilityDescription = options?.vulnerabilityDescription || ''
     this.vulnerabilityLink = options?.vulnerabilityLink || ''
+    this.name = 'SecurityAssertionError'
   }
 
   toString() {
-    return `${this.name} [${this.code}]: ${this.message}\n${this.vulnerabilityTitle}\n${this.vulnerabilityDescription}`
+    return `${this.name} [${this.code}]: ${this.message}\n${this.vulnerabilityTitle}\n${this.vulnerabilityDescription}\n(${this.vulnerabilityLink})`
   }
 }
+
+module.exports = { SecurityAssertionError }
