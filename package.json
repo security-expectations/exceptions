@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/security-expectations/exceptions/issues"
   },
-  "homepage": "https://github.com/security-expectations/exceptions#readme",
+  "homepage": "https://security-expectations.github.io/exceptions/",
   "devDependencies": {
     "@types/jest": "^27.0.2",
     "jest": "^27.3.1",
