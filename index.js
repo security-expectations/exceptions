@@ -1,4 +1,4 @@
-const { AssertionError } = require("assert");
+const { AssertionError } = require('assert')
 
 /**
  * This is the `AssertionError` exception with a small amount of specific metadata added. Additional properties are `vulnerabilityTitle` and `vulnerabilityDescription`.
@@ -8,12 +8,13 @@ const { AssertionError } = require("assert");
  */
 class SecurityAssertionError extends AssertionError {
   constructor(options) {
-    super(options);
-    this.vulnerabilityTitle = options?.vulnerabilityTitle || "";
-    this.vulnerabilityDescription = options?.vulnerabilityDescription || "";
+    super(options)
+    this.vulnerabilityTitle = options?.vulnerabilityTitle || ''
+    this.vulnerabilityDescription = options?.vulnerabilityDescription || ''
+    this.vulnerabilityLink = options?.vulnerabilityLink || ''
   }
 
   toString() {
-    return `${this.name} [${this.code}]: ${this.message}\n${this.vulnerabilityTitle}\n${this.vulnerabilityDescription}`;
+    return `${this.name} [${this.code}]: ${this.message}\n${this.vulnerabilityTitle}\n${this.vulnerabilityDescription}`
   }
 }
