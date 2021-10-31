@@ -15,17 +15,17 @@ class SecurityAssertionError extends AssertionError {
      * The title of the vulnerability.
      * @type string
      */
-    this.vulnerabilityTitle = options?.vulnerabilityTitle || ''
+    this.vulnerabilityTitle = options.vulnerabilityTitle || ''
     /**
      * A description of the vulnerability.
      * @type string
      */
-    this.vulnerabilityDescription = options?.vulnerabilityDescription || ''
+    this.vulnerabilityDescription = options.vulnerabilityDescription || ''
     /**
      * A link to where you can learn more about the vulnerability.
      * @type string
      */
-    this.vulnerabilityLink = options?.vulnerabilityLink || ''
+    this.vulnerabilityLink = options.vulnerabilityLink || ''
     this.name = 'SecurityAssertionError'
   }
 
