@@ -4,7 +4,8 @@
   "description": "This is a package of exceptions used for Security Exception packages.",
   "main": "index.js",
   "scripts": {
-    "test": "npx jest"
+    "test": "npx jest",
+    "docs": "jsdoc2md *.js > ./docs/index.md"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/security-expectations/exceptions#readme",
   "devDependencies": {
     "@types/jest": "^27.0.2",
-    "jest": "^27.3.1"
+    "jest": "^27.3.1",
+    "jsdoc-to-markdown": "^7.1.0"
   }
 }
